@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> decrypting</title>
+        <meta charset="utf-8"/>
+        <link type="text/css" rel="stylesheet" href="decrypting.css"/>
+        <script src="decrypting.js"></script>
+        <meta name="description" content="decrypting images"/>
+        <meta name="keywords" content="coursera" />
+        <meta name="author" content="Bishal kumar"/>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+    </head>
+    <body>
+        <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" ></script>
+        <h1>Decrypt Steganographic images</h1>
+        <summary>
+            Tips to operate:
+            <details ><ol>
+                <li>upload the image in the canvas</li>
+                <li>The second canvas will contain the image the message after decryption!</li>
+                <li>upload the foreground image, and click "Decrypting the hidden message/image" button to get your image!</li>
+            </ol></details>
+        </summary>
+        <div class="container">
+            
+          <div id="header"  class="box">
+              <div id="image_change_box">  
+                  <canvas id="can1" class="box1"></canvas>
+                  <canvas id="can2" class="box1"></canvas>
+              </div>
+          </div>
+          <div id="footer" class="box">
+            <div class="controls">
+
+                <label for="backimg">Secret image:</label>
+                <input id="secret_img" type="file" accept="image/*" multiple="false" onchange="secImg()">
+
+                <hr/>
+                <input id="clear_can" type="button" onclick="clearImages()" value="clear canvas" >
+                <input id="get_back" type="button" onclick="decrypting()" value="Decrypting the Hidden image/message">
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
